@@ -1,8 +1,24 @@
 server:
   port: ${PORT:${SERVER_PORT:0}}
 spring:
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+  zipkin:
+    baseUrl: http://localhost:9411/
   application:
-    name: api-serie
+    name: serie-service
+  data:
+    mongodb:
+      username: usrseriesdevmongo
+      password: pwdseriesdevmongo
+      database: seriesdevmongo
+      port: 27017
+      host: localhost
+
+
 eureka:
   instance:
     hostname: localhost
@@ -12,25 +28,6 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-# server:
-#   port: ${PORT:${SERVER_PORT:0}}
-# spring:
-#   rabbitmq:
-#     username: guest
-#     password: guest
-#     host: localhost
-#     port: 5672
-#   zipkin:
-#     baseUrl: http://localhost:9411/
-#   application:
-#     name: api-serie
-#   data:
-#     mongodb:
-#       username: usrspotifymongo
-#       password: pwdspotifymongo
-#       database: spotifydevmongo
-#       port: 27017
-#       host: localhost
 
 # resilience4j.retry:
 #   instances:
@@ -56,10 +53,3 @@ eureka:
 #       waitDurationInOpenState: 50s
 #       failureRateThreshold: 50
 #       eventConsumerBufferSize: 10
-    
-# eureka:
-#   client:
-#     registerWithEureka: true
-#     fetchRegistry: true
-#     serviceURL:
-#       defaultZone: http://localhost:8761/eureka
