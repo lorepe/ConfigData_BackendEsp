@@ -13,7 +13,7 @@ spring:
       # username: usrcatalogdevmongo
       # password: pwdcatalogdevmongo
       database: catalogdevmongo
-      port: 27018
+      port: 27017
       host: localhost
   application:
     name: api-catalog
