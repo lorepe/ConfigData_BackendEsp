@@ -10,8 +10,8 @@ spring:
     baseUrl: http://localhost:9411/
   data:
     mongodb:
-      username: usrcatalogdevmongo
-      password: pwdcatalogdevmongo
+      # username: usrcatalogdevmongo
+      # password: pwdcatalogdevmongo
       database: catalogdevmongo
       port: 27018
       host: localhost
