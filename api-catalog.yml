@@ -46,7 +46,7 @@ resilience4j.circuitbreaker:
   instances:
     clientMovie:
       registerHealthIndicator: true
-      slidingWindowSize: 10
+      slidingWindowSize: 5
       permittedNumberOfCallsInHalfOpenState: 3
       slidingWindowType: TIME_BASED
       minimumNumberOfCalls: 20
